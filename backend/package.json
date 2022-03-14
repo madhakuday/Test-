@@ -1,0 +1,22 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently -n 'app,frontend' -c 'red,green'  \"nodemon app.js\" \"npm run frontend\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUTION=false npm install --prefix frontend && npm run build  --prefix frontend"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.4"
+  }
+}

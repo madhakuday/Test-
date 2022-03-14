@@ -1,0 +1,7 @@
+.hovbut {
+  transition: all 0.9s ease-in-out;
+}
+.hovbut:hover {
+  color: white;
+  background: rgb(230, 58, 58);
+}
